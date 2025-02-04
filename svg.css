@@ -1,0 +1,47 @@
+    *{
+        margin: 0; padding: 0;
+    }
+    body{
+        overflow-y: hidden; overflow-x: hidden;
+    }
+
+/*SVG IDs*/
+    #SVGDAY{
+        width: 66%; display: block; margin-left: auto; margin-right: auto;
+        user-select: none; -webkit-user-select: none; -ms-user-select: none; 
+        animation-fill-mode: forwards;
+    }
+    #D{
+        animation: fade 2.0s ; transition: all;
+        transform-origin: center;
+        animation-fill-mode: forwards;
+    }
+    #A{
+        animation: fade 2.5s; transition: all;
+        transform-origin: center;
+    }
+    #Y{
+        animation: fade 3.0s; transition: all;
+        transform-origin: center;
+    }
+    @keyframes fade{
+        0% {transform: translate(0, -500px); opacity: 0%;}
+        100% {transform: translate(0, 0); opacity: 100%;}
+    }
+    #background{
+        animation: bgfade 1.0s;
+    }
+    @keyframes bgfade {
+        0% {transform: translate(0, 500px); opacity: 0%;}
+        100%{transform: translate(0, 0); opacity: 100%;}
+    }
+    #sturgeon{
+        transform-origin: center;
+        animation: swim 3.0s;
+    }
+    @keyframes swim{
+        0% {transform: scale(0); transform: translate(0, 500px); opacity: 0%;}
+        70% {transform: scale(1.06)}
+        100% {transform: scale(0.6); transform: translate(0, 0); opacity: 100%;}
+    }
+    
