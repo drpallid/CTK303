@@ -12,22 +12,22 @@
 
 <div id="wrapper">
 
-
     <header>
-        <h1 class="colorful">Pet the sturgeon!!!</h1>
+        <h1>Pet the sturgeon!!!</h1>
+        <p id="pet" class="colorful">Pet Counter: <a id="clicks">0</a></p>
             <h2>Sturgeon should only be pet with two fingers, lightly sliding across their body. However, this is all digital, pet them will all your might!</h2>
     </header>
 
     <main>
-        <p>To pet the Green Sturgeon, please hover over one and hold your left mouse-button!</p>
+        <p>To pet the Green Sturgeon, please hover over one and press your left mouse-button!</p>
         <div class="movement">    
-            <img class="fish" src="green.png" alt="Green sturgeon from NOAA Fisheries" draggable="false">
+            <img class="fish" src="green.png" alt="Green sturgeon from NOAA Fisheries" draggable="false" onclick="onClick()">
         </div>
         <div class="movement2">    
-            <img class="fish" src="green.png" alt="Green sturgeon from NOAA Fisheries" draggable="false">
+            <img class="fish" src="green.png" alt="Green sturgeon from NOAA Fisheries" draggable="false" onclick="onClick()">
         </div>
         <div class="movement3">
-            <img class="fish fishBackwards" src="green.png" alt="Green sturgeon from NOAA Fisheries" draggable="false">
+            <img class="fish fishBackwards" src="green.png" alt="Green sturgeon from NOAA Fisheries" draggable="false" onclick="onClick()">
         </div>
 
     </main>
@@ -52,7 +52,51 @@
     <footer>
         <p>Made by Daytona Howard; CTK 303 @ ILSTU</p>
     </footer>
+
+
 </div>
+
+<script>
+    /* https://stackoverflow.com/questions/22402777/html-javascript-button-click-counter counter maker I referenced*/
+    var clicks = 0;
+ 
+    function onClick() {
+    clicks += 1;
+    document.getElementById("clicks").innerHTML = clicks;
+    
+    pet.classList.add("grow");
+        setTimeout(() => {
+            pet.classList.remove("grow");
+        }, 300);
+    };
+
+
+    /* I used many different cursor trails to try and make this hopefully it will work*/
+    let lastHeartTime = 0;
+        const heartInterval = 35;
+
+        document.addEventListener("mousemove", (e) => {
+            const now = Date.now();
+            if (now - lastHeartTime >= heartInterval) {
+                lastHeartTime = now;
+                
+                const heart = document.createElement("img");
+                heart.src = "heart.svg"; // Path to your SVG file
+                heart.className = "heart";
+                heart.style.left = `${e.pageX}px`;
+                heart.style.top = `${e.pageY}px`;
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 1000);
+            }
+        });
+
+</script>
+
+
 </body>
 
 </html>
