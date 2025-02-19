@@ -22,7 +22,7 @@
 
 /*headers*/
     h1{
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: smaller;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 2.5rem;
         margin-bottom: 20px; text-align: center;
         color: var(--mint);
     }
@@ -98,12 +98,12 @@
 
 /*media queries*/
     /*2nd smallest*/
-        @media all and (min-width: 20rem){
+        @media all and (min-width: 25rem){
             .img{width: 70%;}
             h1{font-size: 5rem;}
         }
     /*3rd smallest*/
-        @media all and (min-width: 55rem){
+        @media all and (min-width: 40rem){
             nav {grid-template-columns: repeat(2, 1fr); width: 77.5%;}
             
         }
