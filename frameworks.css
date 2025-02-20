@@ -1,0 +1,126 @@
+/*html*/
+    *{
+        --mint: #50ea80;
+        --lightgray: #eeeeee;
+        --darkblue: #19195b;
+        --lightblue: #3060a7;
+        --bs-navbar-active-color: #19195b;
+    }
+
+/*body*/
+    body{
+        background-color: var(--darkblue); color: var(--lightgray);
+        overflow-x: hidden; height: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+/*container*/
+
+
+/*headers*/
+    h1{
+        color: var(--mint);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 2.5rem; font-weight: bolder;
+    }
+    h3{
+        color: var(--mint);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.75rem; font-weight: bolder;
+    }
+
+/*navigation*/
+    nav{
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    .navbar.navbar-expand-lg.bg-body-tertiary{
+        width: fit-content; margin-left: auto; margin-right: auto;
+    }
+    .bg-body-tertiary{
+        background-color: var(--lightblue) !important;
+        border-radius: 15px; padding: 15px 2px;
+    }
+    .navbar-brand{
+        transition: all 0.5s;
+        color: var(--darkblue); padding: 10px; border-radius: 10px;
+        background-color: var(--mint);
+    }
+    .navbar-brand:hover{
+        background-color: var(--mint) !important;
+    }
+    .nav-link{
+        transition: all 0.5s;
+        margin-left: 10px; padding: 10px 50px;
+        background-color: var(--lightgray); color: var(--darkblue);
+        border-radius: 10px;
+    }
+    .active{
+        color: var(--mint);
+        background-color: var(--mint);
+    }
+    nav a:hover:not(.nav-link .active){
+        color: var(--darkblue);
+        background-color: var(--mint);
+    }
+    .navbar-toggler{
+        background-color: var(--lightgray);
+        color: var(--darkblue);
+        line-height: 2; margin: 4px 0;
+    }
+    nav.button.navbar-toggle.collapsed{
+        background-color: var(--lightgray);
+        color: var(--darkblue);
+    }
+    span.navbar-toggler-icon{
+        color: var(--darkblue);
+    }
+    button.navbar-toggler{
+        border: 0;
+    }
+
+/*image*/
+    img{
+        width: 75%;
+    }
+
+/*main*/
+    main{
+        margin-bottom: 100px;
+    }
+    p{
+        font-size: 1.25rem;
+    }
+    main .row{
+        margin-bottom: 20px;
+    }
+
+/*footer*/
+    footer{
+        background-color: var(--lightblue);
+        padding: 30px 15px 15px 15px; bottom: 0;
+    }
+    footer p{
+        font-size: large;
+    }
+    footer a{
+        font-size: xx-large; color: var(--lightgray);
+        transition: all 0.5s; margin: 0; padding: 0;
+    }
+    footer a.active{
+        color: var(--mint);
+    }
+    footer a:hover:not(.active){
+        color: var(--mint);
+    }
+    .space{
+        letter-spacing: 5px;
+    }
+
+/*media queries*/
+    @media all and (min-width: 28rem){
+        h1{font-size: 3.5rem;}
+    }
+    @media all and (min-width: 48rem){
+        h1{font-size: 5rem;}
+    }
+
