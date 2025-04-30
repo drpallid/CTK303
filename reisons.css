@@ -1,0 +1,209 @@
+            /*---------html---------*/
+    html{
+        height: 100%; min-height: 100vh; max-height: none;
+        scroll-behavior: smooth;
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+            /*variables*/
+        --background: #ffffff;
+        --activeLink: #ae1030;
+        --pink: #f54e6d;  
+    }
+
+    .koh-santepheap-bold{
+        font-family: "Koh Santepheap", serif;
+        font-weight: bold;
+        font-style: normal;
+      }
+/*body*/
+    body{
+        background-color: #dcd3ab; /*temporary?*/
+        margin: 110px 0 0 0;
+    }
+    p{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6{
+        font-family: "Koh Santepheap", serif;
+    }
+
+/*wrapper*/
+    #wrapper{
+        height: 100%;
+        display: grid;
+        padding: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+
+            /*---------navigation section---------*/
+/*heading, which contains the nav bar and the header*/
+    .heading{
+        position: fixed;
+        width: 100%; top: 0; height: fit-content; max-height: 16%;
+        display: inline-block; overflow: hidden;
+        background-color: var(--background);
+        padding: 0 2%; box-shadow: 0px 5px 5px #00000035;
+        z-index: 10;
+    }    
+/*logo*/
+    .logo{
+        width: 80px; 
+        object-fit:cover;
+        display: block;
+        float: left; margin: 10px;
+    }
+/*nav*/
+    nav li{
+        color: black;
+        height: min-content;
+        transition: all 0.3s; margin-left: 5px;
+        border-radius: 10px; position: relative;
+    }
+    nav li a{
+        color: black !important; font-weight: bolder !important; font-family: "Koh Santepheap", serif; letter-spacing: 0.3px;
+        text-transform: uppercase; text-decoration: none;
+        display: inline-block;
+        text-align: center; justify-content: center;
+        margin: 15px 10px; 
+        transition: all 0.3s; white-space:nowrap;
+    }
+    nav li a.active{color: var(--activeLink);}
+    nav li a:hover:not(.active){color: var(--activeLink) !important;}
+    nav li.employ{background-color: var(--pink);}
+    nav li.orderNow{background-color: var(--pink);}
+    nav li.employ:hover{background-color: #000000;}
+    nav li.orderNow:hover{background-color: #000000;}
+    nav li span{color: white;}
+    nav .icon{font-size: 35px; margin: 0; padding: 0;}
+    .nav2{display: inline-block; width: 100%; margin: 15px 10px;}
+    
+            /*---------bootstrap manual edits---------*/
+.bg-body-tertiary{background-color: var(--background) !important;}
+.nav-link.active{color: var(--activeLink) !important;}
+.nav-item{color: black !important; display: inline-block; width: 49%;}
+.container-fluid{margin-top: 15px;}
+
+
+
+            /*---------main---------*/
+    main{
+        width: 100%; text-align: center;
+        margin: 0px auto;
+        display: grid; grid-column: span 4;
+    }
+    main p{
+        width: 50%; margin-left: auto; margin-right: auto;
+    }
+    .pFull{
+        width: 100%; margin: 0 auto; padding: 30px 0 15px 0; color: white; background-color: #000000; grid-column: span 4;
+    }
+    main a{
+        text-decoration: none; color: var(--pink);
+        transition: all 0.3s;
+    }
+    main a:hover{
+        color: var(--activeLink);
+    }
+    .imageHold{
+        grid-column: span 2;
+        overflow: hidden;
+        margin: 0px;
+    }
+    .imageHold2{
+        grid-column: span 1; overflow: hidden; margin: 0px;
+    }
+    .image{transition: all 0.75s; object-fit: cover;}
+    .image:hover{transform: scale(1.15);}
+
+    
+            /*---------footer---------*/
+    #footer{
+        background-image: linear-gradient(#212121, black, black); color: white;
+        width: 100%; height: min-content;
+        display: inline-block; 
+    }
+    footer h2{text-transform: uppercase; margin-bottom: 15px;}
+    footer p{white-space: nowrap;}
+    footer a{transition: all 0.3s; text-decoration: none; color: var(--pink);}
+    footer a:hover{color: var(--activeLink);}
+    .foot{
+        display: block;
+        text-align: center;
+        float: left;
+        width: 25%;  margin-bottom: 20px;
+    }
+    .footerA{
+        grid-column: span 4;
+        width: 75%; margin: 0 auto;
+        height: 200px; padding: 50px 0 0 0; 
+    }
+    footer a.icon{margin-right: 8px; font-size: 30px; padding-top: 0; margin-top: 0px;}
+    .footerB{
+        bottom: 0; width: 100%;
+        display: inline-block;
+        background-color: black;
+    }
+    .footerB p{
+        margin: 32px auto 0 auto; width: 15%;
+        padding: 5px; grid-column: span 2; float: right;
+        
+    }
+    .logoFooter{
+        object-fit:cover; background-color: white; padding: 3px;
+        width: 60px; grid-column: span 1; border-radius: 100%;
+    }
+
+            /*---------media queries---------*/
+@media all and (min-width: 0px){
+        /*main*/   
+    main .imageHold{max-width: 100%;} 
+    main .image{max-width:100%;}
+    main .imageHold{grid-column: span 4;}
+    main .imageHold2{grid-column: span 4;}
+        /*footer*/
+    footer .foot{width: 100%;}
+    .footerB p{margin-right: 40%;}
+    .logoFooter{margin: 10% 20px;}
+}
+@media all and (min-width: 750px){
+        /*nav*/
+    nav ul{display:inline-block;}
+    .container-fluid{margin: 0px;}
+    li.employ{ display: block; margin: 0;}
+    li.orderNow{display: block; margin: 5px 0 0;}
+    .logo{ margin: 10px 30px 10px 40px;}
+        /*footer*/
+    footer .foot{width: 50%;}
+    .footerB p{margin-right: 25%;}
+    .logoFooter{margin: 20px 0px 20px 80px;}
+   
+    
+}
+@media all and (min-width: 992px){
+        /*nav*/
+    .navbar-toggler-icon{float: left;}
+    li.orderNow{display: block; margin: 0;}
+    .logo{margin: 10px 70px 10px 60px;}
+    .container-fluid{width: 100%;}
+        /*main*/
+    main .imageHold{grid-column: span 2;}
+    main .imageHold2{grid-column: span 1;}
+        /*footer*/
+    .footerB p{margin-right: 15%;}
+    
+    
+}
+@media all and (min-width: 1250px){
+        /*nav*/
+    nav{font-size: 15px;}
+    li.employ{display:block; margin: 0 0 0 0;}
+    li.orderNow{display:block; margin: 0 0 0 10px;}
+    .logo{ margin: 10px 90px 10px 80px;}
+    .container-fluid{width: 100%;}
+        /*footer*/
+    footer .foot{width: 25%;}
+}
